@@ -29,11 +29,13 @@ def play(choice):
 			if(guess not in c):
 				j= v.index(guess)
 				c[j]= v[j]
+				print('%s' % ' '.join(map(str, c)))
 			if(guess in c and c.count(guess) < v.count(guess)):
 				indices = [k for k, x in enumerate(v) if x == guess]
 				for j in indices:
 					if(v[j]!=c[j]):
 						c[j]= v[j]
+						print('%s' % ' '.join(map(str, c)))
 		else:
 			print("Wrong guess!")
 	if(c==v):
